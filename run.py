@@ -29,12 +29,12 @@ dateTo = datetime.strptime(dateY + " 23:59:59", '%Y-%m-%d %H:%M:%S') - timedelta
 
 
 #fetch the areas data
-areas =  'areas.json'
+areas =  '/home/ubuntu/python/areas.json'
 with open(areas, 'r') as f_in:
     areas = json.load(f_in)
 
 # Read data from a CSV file using pandas
-csv_file = 'nearest_roads_output.csv'
+csv_file = '/home/ubuntu/python/nearest_roads_output.csv'
 traffic = pd.read_csv(csv_file)
 
 for area in areas:
