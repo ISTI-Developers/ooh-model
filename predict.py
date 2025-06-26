@@ -92,7 +92,7 @@ def predict_old(area,dateFrom,dateTo):
         print(f"{datetime.today()}: No data found for area {area}. Skipping.")
         return 0
     if cur.rowcount < 4:
-        print(f"{datetime.today()}: Incomplete data for {area}. Skipping.")
+        print(f"{datetime.today()}: Incomplete data for {area} for {dateFrom} to {dateTo}. Skipping.")
         return 0
     
     dbv = cur.fetchall()
