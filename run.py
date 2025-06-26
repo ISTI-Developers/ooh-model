@@ -61,9 +61,10 @@ for area in areas:
     max_result = max(new_result,old_result)
     site_traffic = traffic[traffic['site'] == area]
     origin_impression = site_traffic['origin_impression'].values[0] if not site_traffic.empty else 0
-    impression = round((origin_impression + max_result) / 3)
+    dest_impression = site_traffic['destination_impression'].values[0] if not site_traffic.empty else 0
+    impression = round((origin_impression + dest_impression + max_result) / 3)
     
-    print(f"Inserting impression for {area}: {impression} | {origin_impression}, {max_result}")
+    print(f"Inserting impression for {area}: {max_result}")
     #initialize uuid
     uuidv4 = uuid.uuid4()
     
