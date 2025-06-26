@@ -63,6 +63,7 @@ for area in areas:
     dest_impression = site_traffic['destination_impression'].values[0] if not site_traffic.empty else 0
     impression = round((origin_impression + dest_impression + max_result) / 3)
     
+    print(f"Inserting impression for {area}: {impression} | {origin_impression}, {dest_impression}, {max_result}")
     #initialize uuid
     uuidv4 = uuid.uuid4()
     
@@ -70,7 +71,7 @@ for area in areas:
     cur = conn.cursor()
     
     query = """INSERT INTO impressions (i_id, area, impressions, record_at) VALUES (%s, %s,%s, %s)"""
-    values = (uuidv4, area, max_result, dateY)
+    values = (uuidv4, area,impression, dateY)
     
     cur.execute(query,values)
     

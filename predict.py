@@ -76,7 +76,6 @@ def predict_new(area, dateFrom, dateTo, lane):
 
     # Iterate through the input vector and predict the result per row
     for d in dataX:
-        print(d)
         res = model.predict([d])[0]
         result = res
         j += 1
@@ -130,5 +129,4 @@ def predict_old(area,dateFrom,dateTo):
     
     # Iterate through the input vector and predict the result per row
     [result] = model.predict(dataX)
-    conn.clos
     return result
