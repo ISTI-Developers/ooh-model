@@ -50,7 +50,14 @@ for area in areas:
         "OR": 3,
         "QA": 6,
         "RO": 7,
-        "SL": 2
+        "SL": 2,
+        "RI": 3,
+        "BT": 4,
+        "CE": 3,
+        "BC": 3,
+        "DV": 2,
+        "CD": 2,
+        
     }.get(areaCode, 2)
 
     if areaCode == "CW":
