@@ -41,7 +41,8 @@ for area in areas:
     areaCode = area[:2]
     lane = {
         "C5": 4,
-        "B0": 2,
+        "NL": 4,
+        "GP": 2,
         "BG": 2,
         "ED": 4,
         "ES": 4,
